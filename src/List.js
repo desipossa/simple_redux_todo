@@ -20,7 +20,7 @@ const List = () => {
                 {
                     todoList.map(it => {
                         return (
-                            <LI key={it.id} className={it.done ? '' : 'on'}>{it.content} &nbsp;&nbsp;&nbsp;
+                            <LI key={it.id} className={it.done ? 'on' : ''}>{it.content} &nbsp;&nbsp;&nbsp;
                                 <button onClick={() => dispatch(update(it))}>{it.done ? 'DOIT' : 'GOOD'}</button>
                                 <button onClick={() => dispatch(remove(it))}>DELETE</button>
                             </LI>
